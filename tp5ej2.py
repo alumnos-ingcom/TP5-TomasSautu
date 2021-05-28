@@ -5,10 +5,8 @@
 from utilidades import ingreso_entero
 
 def fibonacci(numero):
-    termino_1 = 1
-    termino_2 = 1
     n_esimo = numero - 1
-    lista = [termino_1 , termino_2]
+    lista = [1, 1]
     for i in range(n_esimo-1):
         lista.append(lista[-1] + lista[-2])
         resultado = lista[-1]

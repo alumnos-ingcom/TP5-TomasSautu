@@ -6,10 +6,7 @@
 from utilidades import ingreso_entero
 
 def tribonacci(numero):
-    termino_1 = 1
-    termino_2 = 1
-    termino_3 = 1
-    lista = [termino_1, termino_2, termino_3]
+    lista = [1, 1, 1]
     n_esimo = numero - 2
     for i in range(n_esimo-1):
         lista.append(lista[-1]+lista[-2]+lista[-3])
