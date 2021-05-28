@@ -3,18 +3,6 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-# def ingreso_real(mensaje):
-#     """
-#     Esta funcion muestra un mensaje para indicar el ingreso
-#     de un número real.
-#     """
-#     ingreso = input(mensaje)
-#     try:
-#         real = float(ingreso)
-#     except ValueError as err:
-#         raise IngresoIncorrecto("No era un número genio!") from err
-#     return real
-
 from utilidades import ingreso_real
 
 def distancia(numeroUno, numeroDos):
@@ -25,9 +13,10 @@ def distancia(numeroUno, numeroDos):
     else:
         menor = numeroUno
         mayor = numeroDos
-    while menor < mayor:
-        distancia = distancia + 0.1
-        menor = menor + 0.1
+    
+    distancia = mayor - menor
+    distancia = round(distancia, 1)
+    
     return distancia
     
         
