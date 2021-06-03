@@ -8,7 +8,7 @@ from utilidades import ingreso_entero
 def numero_binario(numero):
     binario = []
     if numero > 0:
-        while (numero > 0 or numero >= 1):
+        while numero > 0:
             num_binario = numero % 2
             text_binario = str(num_binario)
             binario.append(text_binario)
