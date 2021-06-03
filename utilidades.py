@@ -10,6 +10,17 @@ def ingreso_entero(mensaje):
         raise IngresoIncorrecto("No era un número genio!") from err
     return entero
 
+def ingreso_real(mensaje):
+    """
+    Esta funcion muestra un mensaje para indicar el ingreso
+    de un número real.
+    """
+    ingreso = input(mensaje)
+    try:
+        real = float(ingreso)
+    except ValueError as err:
+        raise IngresoIncorrecto("No era un número genio!") from err
+    return real
 
 def ingreso_entero_reintento(mensaje, cantidad_reintentos= 5):
     """Esta función sirva para ingresar un número entero, si lo ingresasado
@@ -63,3 +74,11 @@ def factores_primos(numero):
         return factores
     else:
         return False
+
+import random
+
+def lista_aleatoria(cantidad_numeros):
+    lista = []
+    for i in range(cantidad_numeros):
+        lista.append(random.randint(0, 200))
+    return lista
