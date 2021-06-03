@@ -9,38 +9,38 @@ def codificar_cifrado_cesar(rotacion, texto):
     texto_encriptado_lista = []
     for i in texto:
         dato_texto = ord(i)
-        if dato_texto >= 65 and dato_texto <= 90:
+        if dato_texto >= ord('A') and dato_texto <= ord('Z'):
             dato_texto_mayuscula = dato_texto + rotacion
-            if dato_texto_mayuscula > 90:
-                while dato_texto_mayuscula > 90:
+            if dato_texto_mayuscula > ord('Z'):
+                while dato_texto_mayuscula > ord('Z'):
                     dato_texto_mayuscula -= 26
                 dato_texto = chr(dato_texto_mayuscula)
-            elif dato_texto_mayuscula < 65:
-                while dato_texto_mayuscula < 65:
+            elif dato_texto_mayuscula < ord('A'):
+                while dato_texto_mayuscula < ord('A'):
                     dato_texto_mayuscula += 26
                 dato_texto = chr(dato_texto_mayuscula)
             else:
                 dato_texto = chr(dato_texto_mayuscula)
-        elif dato_texto >= 97 and dato_texto <= 122:
+        elif dato_texto >= ord('a') and dato_texto <= ord('z'):
             dato_texto_minuscula = dato_texto + rotacion
-            if dato_texto_minuscula > 122:
-                while dato_texto_minuscula > 122:
+            if dato_texto_minuscula > ord('z'):
+                while dato_texto_minuscula > ord('z'):
                     dato_texto_minuscula -= 26
                 dato_texto = chr(dato_texto_minuscula)
-            elif dato_texto_minuscula < 97:
-                while dato_texto_minuscula < 97:
+            elif dato_texto_minuscula < ord('a'):
+                while dato_texto_minuscula < ord('a'):
                     dato_texto_minuscula += 26
                 dato_texto = chr(dato_texto_minuscula)
             else:
                 dato_texto = chr(dato_texto_minuscula)
-        elif dato_texto >= 48 and dato_texto <= 57:
+        elif dato_texto >= ord('0') and dato_texto <= ord('9'):
             dato_texto_numero = dato_texto + rotacion
-            if dato_texto_numero > 57:
-                while dato_texto_numero > 57:
+            if dato_texto_numero > ord('9'):
+                while dato_texto_numero > ord('9'):
                     dato_texto_numero -= 10
                 dato_texto = chr(dato_texto_numero)
-            elif dato_texto_numero < 48:
-                while dato_texto_numero < 48:
+            elif dato_texto_numero < ord('0'):
+                while dato_texto_numero < ord('0'):
                     dato_texto_numero += 10
                 dato_texto = chr(dato_texto_numero)
             else:
@@ -55,38 +55,38 @@ def decodificar_cifrado_cesar(rotacion, texto):
     texto_encriptado_lista = []
     for i in texto:
         dato_texto = ord(i)
-        if dato_texto >= 65 and dato_texto <= 90:
+        if dato_texto >= ord('A') and dato_texto <= ord('Z'):
             dato_texto_mayuscula = dato_texto - rotacion
-            if dato_texto_mayuscula > 90:
-                while dato_texto_mayuscula > 90:
+            if dato_texto_mayuscula > ord('Z'):
+                while dato_texto_mayuscula > ord('Z'):
                     dato_texto_mayuscula -= 26
                 dato_texto = chr(dato_texto_mayuscula)
-            elif dato_texto_mayuscula < 65:
-                while dato_texto_mayuscula < 65:
+            elif dato_texto_mayuscula < ord('A'):
+                while dato_texto_mayuscula < ord('A'):
                     dato_texto_mayuscula += 26
                 dato_texto = chr(dato_texto_mayuscula)
             else:
                 dato_texto = chr(dato_texto_mayuscula)
-        elif dato_texto >= 97 and dato_texto <= 122:
+        elif dato_texto >= ord('a') and dato_texto <= ord('z'):
             dato_texto_minuscula = dato_texto - rotacion
-            if dato_texto_minuscula > 122:
-                while dato_texto_minuscula > 122:
+            if dato_texto_minuscula > ord('z'):
+                while dato_texto_minuscula > ord('z'):
                     dato_texto_minuscula -= 26
                 dato_texto = chr(dato_texto_minuscula)
-            elif dato_texto_minuscula < 97:
-                while dato_texto_minuscula < 97:
+            elif dato_texto_minuscula < ord('a'):
+                while dato_texto_minuscula < ord('a'):
                     dato_texto_minuscula += 26
                 dato_texto = chr(dato_texto_minuscula)
             else:
                 dato_texto = chr(dato_texto_minuscula)
-        elif dato_texto >= 48 and dato_texto <= 57:
+        elif dato_texto >= ord('0') and dato_texto <= ord('9'):
             dato_texto_numero = dato_texto - rotacion
-            if dato_texto_numero > 57:
-                while dato_texto_numero > 57:
+            if dato_texto_numero > ord('9'):
+                while dato_texto_numero > ord('9'):
                     dato_texto_numero -= 10
                 dato_texto = chr(dato_texto_numero)
-            elif dato_texto_numero < 48:
-                while dato_texto_numero < 48:
+            elif dato_texto_numero < ord('0'):
+                while dato_texto_numero < ord('0'):
                     dato_texto_numero += 10
                 dato_texto = chr(dato_texto_numero)
             else:
